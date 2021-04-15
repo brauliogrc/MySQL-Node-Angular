@@ -1,0 +1,27 @@
+<!-- Para que la etiqueta "mat-toolbar" deje de dar error, debemos importat el módulo "MatToolbarModule" desde @angular/material/toolbar
+en el archivo del módulo "MaterialModule" -->
+<mat-toolbar color="primary">
+    <ng-container *ngIf=" !isAdmin; else viewAdmin">
+        <span> My App </span>
+        <span class="spacer"></span>
+
+        <div>
+            <a *ngIf="!isLogged; else viewLogout" mat-button routerLink="/login">Login</a>
+            
+            <a mat-button routerLink="/admin">Admin</a>
+
+        </div>
+    </ng-container>
+</mat-toolbar>
+
+<ng-template #viewLogout>
+    <a mat-button (click)="onLogout()">Logout</a>
+</ng-template>
+
+
+<ng-template #viewAdmin>
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spcaer"></span>
+</ng-template>

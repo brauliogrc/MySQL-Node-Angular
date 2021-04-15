@@ -3,6 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    // DEFINICION DE ALIAS DE RUTAS (CONFIGURACION REALIZADA MANUALMENTE)
+    "paths": {
+      "@app/*"    :["src/app/*"],
+      "@shared/*" :["src/app/shared/*"],
+      "@admin/*"  :["src/app/pages/*"],
+      "@pages/*"  :["src/app/pages/*"],
+      "@auth/*"   :["src/app/pages/auth/*"],
+      "@env/*"    :["src/environments/*"]
+    },
+    // -------------------------------------------------------------------
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

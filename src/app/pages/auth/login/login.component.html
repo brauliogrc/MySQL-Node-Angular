@@ -1,0 +1,28 @@
+<!-- Las etiquetas que comienzan con "mat", son elementos de "@angular/material". Sus módulos se enecuentran importados en el "MaterialModule"-->
+<div class="login-form">
+    <mat-card>
+        <mat-card-content>
+            <h1>Login</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+                <mat-form-field class="full-width-input">
+                    <input matInput
+                    placeholder="Username"
+                    required
+                    type="text"
+                    formControlName="username">
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input separator">
+                    <input 
+                    matInput placeholder="Password"
+                    required
+                    type="password"
+                    formControlName="password">
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

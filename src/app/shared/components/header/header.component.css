@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    /* Definimos las etiquetas Anchor sin subrayado y color blanco */
+    text-decoration: none;
+    color: white;
+}
